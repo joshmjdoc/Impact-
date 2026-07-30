@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check .com, .io, and .app availability against authoritative registry RDAP."""
+"""Bulk-check .com, .io, and .app using RDAP/WHOIS registry aggregation."""
 
 from __future__ import annotations
 
@@ -7,100 +7,58 @@ import argparse
 import csv
 import json
 import random
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
 from urllib.parse import quote
 
 import requests
 
 TLDS = ("com", "io", "app")
-RDAP_BASES = {
-    "com": "https://rdap.verisign.com/com/v1/",
-    "io": "https://rdap.identitydigital.services/rdap/",
-    "app": "https://rdap.nic.google/",
-}
+API_BASE = "https://rdap.cloud/api/v1/"
 HEADERS = {
-    "User-Agent": "ImpactHealth-DomainResearch/1.0 (domain availability research)",
-    "Accept": "application/rdap+json, application/json;q=0.9, */*;q=0.1",
+    "User-Agent": "ImpactHealth-DomainResearch/1.0",
+    "Accept": "application/json",
 }
-_thread_local = threading.local()
 
 
-def session() -> requests.Session:
-    value = getattr(_thread_local, "session", None)
-    if value is None:
-        value = requests.Session()
-        value.headers.update(HEADERS)
-        _thread_local.session = value
-    return value
+def chunks(values, size):
+    for index in range(0, len(values), size):
+        yield values[index:index + size]
 
 
-def rdap_url(tld: str, domain: str) -> str:
-    return RDAP_BASES[tld].rstrip("/") + "/domain/" + quote(domain, safe=".-")
-
-
-def dns_fallback(domain: str) -> tuple[str, str]:
-    """Conservative fallback: DNS can confirm use, but not registrar inventory."""
-    try:
-        response = session().get(
-            "https://dns.google/resolve",
-            params={"name": domain, "type": "NS"},
-            timeout=20,
-        )
-        if response.status_code != 200:
-            return "unknown", f"doh_http_{response.status_code}"
-        payload = response.json()
-        status = payload.get("Status")
-        answers = payload.get("Answer") or []
-        authority = payload.get("Authority") or []
-        if status == 0 and any(item.get("type") == 2 for item in answers):
-            return "taken", "google_doh_ns"
-        if status == 3 and any(item.get("type") == 6 for item in authority):
-            return "likely_available", "google_doh_nxdomain"
-        return "unknown", f"google_doh_status_{status}"
-    except Exception as exc:
-        return "unknown", f"google_doh_error:{type(exc).__name__}"
-
-
-def check_domain(domain: str, tld: str) -> dict[str, str]:
-    url = rdap_url(tld, domain)
+def fetch_chunk(domains: list[str]) -> dict[str, dict[str, str]]:
+    url = API_BASE + quote(",".join(domains), safe=".,-")
     last_error = ""
-    for attempt in range(6):
+    for attempt in range(7):
         try:
-            if attempt == 0:
-                time.sleep(random.uniform(0.0, 0.25))
-            response = session().get(url, timeout=25, allow_redirects=True)
-            code = response.status_code
-            if code == 200:
-                return {"status": "taken", "source": f"authoritative_rdap:{RDAP_BASES[tld]}", "http": "200"}
-            if code == 404:
-                return {"status": "available", "source": f"authoritative_rdap:{RDAP_BASES[tld]}", "http": "404"}
-            if code in (429, 500, 502, 503, 504):
-                last_error = f"http_{code}"
-                time.sleep(min(25, (2 ** attempt) + random.uniform(0.3, 1.5)))
-                continue
-            last_error = f"http_{code}"
-            break
-        except requests.RequestException as exc:
+            time.sleep(random.uniform(0.0, 0.15))
+            response = requests.get(url, headers=HEADERS, timeout=60)
+            if response.status_code == 200:
+                payload = response.json()
+                raw_results = payload.get("results", {})
+                output: dict[str, dict[str, str]] = {}
+                for domain in domains:
+                    item = raw_results.get(domain) or raw_results.get(domain.lower()) or {}
+                    success = item.get("success")
+                    message = str(item.get("message", ""))
+                    if success is True and item.get("data"):
+                        output[domain] = {"status": "taken", "source": "rdap.cloud_registry_lookup"}
+                    elif success is False and "does not appear to be a registered domain" in message.lower():
+                        output[domain] = {"status": "available", "source": "rdap.cloud_registry_lookup"}
+                    elif success is False and "does not appear to be a registered domain name" in message.lower():
+                        output[domain] = {"status": "available", "source": "rdap.cloud_registry_lookup"}
+                    else:
+                        output[domain] = {"status": "unknown", "source": f"rdap.cloud:{message or 'unrecognized_response'}"}
+                return output
+            last_error = f"http_{response.status_code}"
+            if response.status_code not in (429, 500, 502, 503, 504):
+                break
+        except (requests.RequestException, ValueError) as exc:
             last_error = type(exc).__name__
-            time.sleep(min(20, (2 ** attempt) + random.uniform(0.3, 1.2)))
-
-    try:
-        proxy = "https://rdap.org/domain/" + quote(domain, safe=".-")
-        response = session().get(proxy, timeout=25, allow_redirects=True)
-        if response.status_code == 200:
-            return {"status": "taken", "source": "rdap.org_proxy", "http": "200"}
-        if response.status_code == 404:
-            return {"status": "available", "source": "rdap.org_proxy", "http": "404"}
-    except requests.RequestException:
-        pass
-
-    status, source = dns_fallback(domain)
-    return {"status": status, "source": f"{source};rdap_error={last_error}", "http": ""}
+        time.sleep(min(35, (2 ** attempt) + random.uniform(0.5, 2.0)))
+    return {domain: {"status": "unknown", "source": f"rdap.cloud_error:{last_error}"} for domain in domains}
 
 
 def main() -> None:
@@ -109,31 +67,42 @@ def main() -> None:
     parser.add_argument("--output", required=True)
     parser.add_argument("--batch-index", type=int, required=True)
     parser.add_argument("--batch-count", type=int, required=True)
-    parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--workers", type=int, default=4)
     args = parser.parse_args()
 
     with open(args.input, newline="", encoding="utf-8") as handle:
         all_rows = list(csv.DictReader(handle))
     rows = [row for row in all_rows if (int(row["rank"]) - 1) % args.batch_count == args.batch_index]
 
-    futures: dict[Any, tuple[int, str]] = {}
-    results: dict[tuple[int, str], dict[str, str]] = {}
+    domains = []
+    domain_keys = {}
+    for row in rows:
+        rank = int(row["rank"])
+        label = row["label"].strip().lower()
+        for tld in TLDS:
+            domain = f"{label}.{tld}"
+            domains.append(domain)
+            domain_keys[domain] = (rank, tld)
+
+    results_by_domain: dict[str, dict[str, str]] = {}
+    domain_chunks = list(chunks(domains, 10))
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
-        for row in rows:
-            rank = int(row["rank"])
-            label = row["label"].strip().lower()
-            for tld in TLDS:
-                futures[executor.submit(check_domain, f"{label}.{tld}", tld)] = (rank, tld)
+        future_map = {executor.submit(fetch_chunk, chunk): chunk for chunk in domain_chunks}
         completed = 0
-        for future in as_completed(futures):
-            rank, tld = futures[future]
+        for future in as_completed(future_map):
+            chunk = future_map[future]
             try:
-                results[(rank, tld)] = future.result()
+                results_by_domain.update(future.result())
             except Exception as exc:
-                results[(rank, tld)] = {"status": "unknown", "source": f"worker_error:{type(exc).__name__}"}
+                for domain in chunk:
+                    results_by_domain[domain] = {"status": "unknown", "source": f"worker_error:{type(exc).__name__}"}
             completed += 1
-            if completed % 50 == 0 or completed == len(futures):
-                print(f"batch {args.batch_index}: {completed}/{len(futures)}", flush=True)
+            if completed % 10 == 0 or completed == len(domain_chunks):
+                print(f"batch {args.batch_index}: {completed}/{len(domain_chunks)} API batches", flush=True)
+
+    results = {}
+    for domain, key in domain_keys.items():
+        results[key] = results_by_domain.get(domain, {"status": "unknown", "source": "missing_result"})
 
     checked = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     fields = [
@@ -159,7 +128,7 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(output_rows)
 
-    counts: dict[str, int] = {}
+    counts = {}
     for row in output_rows:
         for tld in TLDS:
             key = f"{tld}:{row[f'{tld}_status']}"
