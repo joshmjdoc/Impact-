@@ -1,0 +1,1 @@
+Run authoritative .com, .io, and .app domain availability research for the current candidate pool.
