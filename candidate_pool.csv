@@ -1,0 +1,801 @@
+rank,display,label,category,score
+1,My Care Hub,mycarehub,Personal portal name,31.25
+2,My Clinic Hub,myclinichub,Personal portal name,30.75
+3,My Doctor Hub,mydoctorhub,Personal portal name,30.75
+4,My Health Hub,myhealthhub,Personal portal name,30.75
+5,My Care App,mycareapp,Personal portal name,30.25
+6,My Care Now,mycarenow,Personal portal name,30.25
+7,My Care Desk,mycaredesk,Personal portal name,30.0
+8,My Care Home,mycarehome,Personal portal name,30.0
+9,My Care Link,mycarelink,Personal portal name,30.0
+10,My Clinic App,myclinicapp,Personal portal name,29.75
+11,My Clinic Now,myclinicnow,Personal portal name,29.75
+12,My Doctor App,mydoctorapp,Personal portal name,29.75
+13,My Doctor Now,mydoctornow,Personal portal name,29.75
+14,My Health App,myhealthapp,Personal portal name,29.75
+15,My Health Now,myhealthnow,Personal portal name,29.75
+16,My Care Access,mycareaccess,Personal portal name,29.5
+17,My Care Portal,mycareportal,Personal portal name,29.5
+18,My Clinic Desk,myclinicdesk,Personal portal name,29.5
+19,My Clinic Home,myclinichome,Personal portal name,29.5
+20,My Clinic Link,mycliniclink,Personal portal name,29.5
+21,My Doctor Desk,mydoctordesk,Personal portal name,29.5
+22,My Doctor Home,mydoctorhome,Personal portal name,29.5
+23,My Doctor Link,mydoctorlink,Personal portal name,29.5
+24,My Health Desk,myhealthdesk,Personal portal name,29.5
+25,My Health Home,myhealthhome,Personal portal name,29.5
+26,My Health Link,myhealthlink,Personal portal name,29.5
+27,My Care Connect,mycareconnect,Personal portal name,29.25
+28,My Care Team,mycareteam,Personal portal name,29.0
+29,My Clinic Access,myclinicaccess,Personal portal name,29.0
+30,My Clinic Connect,myclinicconnect,Personal portal name,29.0
+31,My Clinic Portal,myclinicportal,Personal portal name,29.0
+32,My Doctor Access,mydoctoraccess,Personal portal name,29.0
+33,My Doctor Connect,mydoctorconnect,Personal portal name,29.0
+34,My Doctor Portal,mydoctorportal,Personal portal name,29.0
+35,My Health Access,myhealthaccess,Personal portal name,29.0
+36,My Health Connect,myhealthconnect,Personal portal name,29.0
+37,My Health Portal,myhealthportal,Personal portal name,29.0
+38,My Visit Hub,myvisithub,Personal portal name,29.0
+39,One Care Hub,onecarehub,Personal portal name,29.0
+40,Our Care Hub,ourcarehub,Personal portal name,29.0
+41,My Care Login,mycarelogin,Personal portal name,28.75
+42,My Office Hub,myofficehub,Personal portal name,28.75
+43,Your Care Hub,yourcarehub,Personal portal name,28.75
+44,My Care Office,mycareoffice,Personal portal name,28.5
+45,My Care Online,mycareonline,Personal portal name,28.5
+46,My Clinic Team,myclinicteam,Personal portal name,28.5
+47,My Doctor Team,mydoctorteam,Personal portal name,28.5
+48,My Health Team,myhealthteam,Personal portal name,28.5
+49,My Medical Hub,mymedicalhub,Personal portal name,28.5
+50,My Records Hub,myrecordshub,Personal portal name,28.5
+51,One Clinic Hub,oneclinichub,Personal portal name,28.5
+52,One Doctor Hub,onedoctorhub,Personal portal name,28.5
+53,One Health Hub,onehealthhub,Personal portal name,28.5
+54,Our Clinic Hub,ourclinichub,Personal portal name,28.5
+55,Our Doctor Hub,ourdoctorhub,Personal portal name,28.5
+56,Our Health Hub,ourhealthhub,Personal portal name,28.5
+57,My Clinic Login,mycliniclogin,Personal portal name,28.25
+58,My Doctor Login,mydoctorlogin,Personal portal name,28.25
+59,My Health Login,myhealthlogin,Personal portal name,28.25
+60,My Practice Hub,mypracticehub,Personal portal name,28.25
+61,Your Clinic Hub,yourclinichub,Personal portal name,28.25
+62,Your Doctor Hub,yourdoctorhub,Personal portal name,28.25
+63,Your Health Hub,yourhealthhub,Personal portal name,28.25
+64,My Clinic Office,myclinicoffice,Personal portal name,28.0
+65,My Clinic Online,mycliniconline,Personal portal name,28.0
+66,My Doctor Online,mydoctoronline,Personal portal name,28.0
+67,My Health Office,myhealthoffice,Personal portal name,28.0
+68,My Health Online,myhealthonline,Personal portal name,28.0
+69,My Visit App,myvisitapp,Personal portal name,28.0
+70,My Visit Now,myvisitnow,Personal portal name,28.0
+71,One Care App,onecareapp,Personal portal name,28.0
+72,One Care Now,onecarenow,Personal portal name,28.0
+73,Our Care App,ourcareapp,Personal portal name,28.0
+74,Our Care Now,ourcarenow,Personal portal name,28.0
+75,My Care Cloud,mycarecloud,Personal portal name,27.75
+76,My Office App,myofficeapp,Personal portal name,27.75
+77,My Office Now,myofficenow,Personal portal name,27.75
+78,My Visit Desk,myvisitdesk,Personal portal name,27.75
+79,My Visit Link,myvisitlink,Personal portal name,27.75
+80,One Care Desk,onecaredesk,Personal portal name,27.75
+81,One Care Home,onecarehome,Personal portal name,27.75
+82,One Care Link,onecarelink,Personal portal name,27.75
+83,Our Care Desk,ourcaredesk,Personal portal name,27.75
+84,Our Care Home,ourcarehome,Personal portal name,27.75
+85,Our Care Link,ourcarelink,Personal portal name,27.75
+86,Your Care App,yourcareapp,Personal portal name,27.75
+87,Your Care Now,yourcarenow,Personal portal name,27.75
+88,My Medical App,mymedicalapp,Personal portal name,27.5
+89,My Medical Now,mymedicalnow,Personal portal name,27.5
+90,My Office Desk,myofficedesk,Personal portal name,27.5
+91,My Office Link,myofficelink,Personal portal name,27.5
+92,My Records App,myrecordsapp,Personal portal name,27.5
+93,My Records Now,myrecordsnow,Personal portal name,27.5
+94,One Clinic App,oneclinicapp,Personal portal name,27.5
+95,One Clinic Now,oneclinicnow,Personal portal name,27.5
+96,One Doctor App,onedoctorapp,Personal portal name,27.5
+97,One Doctor Now,onedoctornow,Personal portal name,27.5
+98,One Health App,onehealthapp,Personal portal name,27.5
+99,One Health Now,onehealthnow,Personal portal name,27.5
+100,Our Clinic App,ourclinicapp,Personal portal name,27.5
+101,Our Clinic Now,ourclinicnow,Personal portal name,27.5
+102,Our Doctor App,ourdoctorapp,Personal portal name,27.5
+103,Our Doctor Now,ourdoctornow,Personal portal name,27.5
+104,Our Health App,ourhealthapp,Personal portal name,27.5
+105,Our Health Now,ourhealthnow,Personal portal name,27.5
+106,Your Care Desk,yourcaredesk,Personal portal name,27.5
+107,Your Care Home,yourcarehome,Personal portal name,27.5
+108,Your Care Link,yourcarelink,Personal portal name,27.5
+109,My Clinic Cloud,mycliniccloud,Personal portal name,27.25
+110,My Health Cloud,myhealthcloud,Personal portal name,27.25
+111,My Medical Desk,mymedicaldesk,Personal portal name,27.25
+112,My Medical Home,mymedicalhome,Personal portal name,27.25
+113,My Medical Link,mymedicallink,Personal portal name,27.25
+114,My Practice App,mypracticeapp,Personal portal name,27.25
+115,My Practice Now,mypracticenow,Personal portal name,27.25
+116,One Care Access,onecareaccess,Personal portal name,27.25
+117,One Care Portal,onecareportal,Personal portal name,27.25
+118,Our Care Access,ourcareaccess,Personal portal name,27.25
+119,Our Care Portal,ourcareportal,Personal portal name,27.25
+120,Your Clinic App,yourclinicapp,Personal portal name,27.25
+121,Your Clinic Now,yourclinicnow,Personal portal name,27.25
+122,Your Doctor App,yourdoctorapp,Personal portal name,27.25
+123,Your Doctor Now,yourdoctornow,Personal portal name,27.25
+124,Your Health App,yourhealthapp,Personal portal name,27.25
+125,Your Health Now,yourhealthnow,Personal portal name,27.25
+126,My Care Simple,mycaresimple,Personal portal name,27.0
+127,My Health Simple,myhealthsimple,Personal portal name,27.0
+128,My Visit Home,myvisithome,Personal portal name,27.0
+129,One Care Connect,onecareconnect,Personal portal name,27.0
+130,One Care Team,onecareteam,Personal portal name,27.0
+131,Our Care Connect,ourcareconnect,Personal portal name,27.0
+132,Our Care Team,ourcareteam,Personal portal name,27.0
+133,Your Care Access,yourcareaccess,Personal portal name,27.0
+134,Your Care Portal,yourcareportal,Personal portal name,27.0
+135,My Clinic Simple,myclinicsimple,Personal portal name,26.75
+136,My Doctor Simple,mydoctorsimple,Personal portal name,26.75
+137,My Health Ready,myhealthready,Personal portal name,26.75
+138,My Medical Access,mymedicalaccess,Personal portal name,26.75
+139,My Medical Portal,mymedicalportal,Personal portal name,26.75
+140,My Practice Desk,mypracticedesk,Personal portal name,26.75
+141,My Practice Link,mypracticelink,Personal portal name,26.75
+142,One Clinic Desk,oneclinicdesk,Personal portal name,26.75
+143,One Clinic Home,oneclinichome,Personal portal name,26.75
+144,One Clinic Link,onecliniclink,Personal portal name,26.75
+145,One Doctor Desk,onedoctordesk,Personal portal name,26.75
+146,One Doctor Home,onedoctorhome,Personal portal name,26.75
+147,One Doctor Link,onedoctorlink,Personal portal name,26.75
+148,One Health Desk,onehealthdesk,Personal portal name,26.75
+149,One Health Home,onehealthhome,Personal portal name,26.75
+150,One Health Link,onehealthlink,Personal portal name,26.75
+151,Our Clinic Desk,ourclinicdesk,Personal portal name,26.75
+152,Our Clinic Home,ourclinichome,Personal portal name,26.75
+153,Our Clinic Link,ourcliniclink,Personal portal name,26.75
+154,Our Doctor Desk,ourdoctordesk,Personal portal name,26.75
+155,Our Doctor Home,ourdoctorhome,Personal portal name,26.75
+156,Our Doctor Link,ourdoctorlink,Personal portal name,26.75
+157,Our Health Desk,ourhealthdesk,Personal portal name,26.75
+158,Our Health Home,ourhealthhome,Personal portal name,26.75
+159,Our Health Link,ourhealthlink,Personal portal name,26.75
+160,Your Care Connect,yourcareconnect,Personal portal name,26.75
+161,Easy Care,easycare,Simple two-word brand,26.5
+162,Good Care,goodcare,Simple two-word brand,26.5
+163,My Care,mycare,Simple two-word brand,26.5
+164,One Care,onecare,Simple two-word brand,26.5
+165,Open Care,opencare,Simple two-word brand,26.5
+166,Real Care,realcare,Simple two-word brand,26.5
+167,Smart Care,smartcare,Simple two-word brand,26.5
+168,True Care,truecare,Simple two-word brand,26.5
+169,Easy Health,easyhealth,Simple two-word brand,26.25
+170,Good Health,goodhealth,Simple two-word brand,26.25
+171,My Doctor,mydoctor,Simple two-word brand,26.25
+172,My Health,myhealth,Simple two-word brand,26.25
+173,One Doctor,onedoctor,Simple two-word brand,26.25
+174,One Health,onehealth,Simple two-word brand,26.25
+175,Open Health,openhealth,Simple two-word brand,26.25
+176,Real Health,realhealth,Simple two-word brand,26.25
+177,Smart Health,smarthealth,Simple two-word brand,26.25
+178,True Health,truehealth,Simple two-word brand,26.25
+179,Better Care,bettercare,Simple two-word brand,26.0
+180,Bright Care,brightcare,Simple two-word brand,26.0
+181,Clear Care,clearcare,Simple two-word brand,26.0
+182,Hello Care,hellocare,Simple two-word brand,26.0
+183,Ready Care,readycare,Simple two-word brand,26.0
+184,Simple Care,simplecare,Simple two-word brand,26.0
+185,Better Health,betterhealth,Simple two-word brand,25.75
+186,Bright Health,brighthealth,Simple two-word brand,25.75
+187,Clear Health,clearhealth,Simple two-word brand,25.75
+188,Hello Health,hellohealth,Simple two-word brand,25.75
+189,Ready Health,readyhealth,Simple two-word brand,25.75
+190,Simple Health,simplehealth,Simple two-word brand,25.75
+191,Easy Clinic,easyclinic,Simple two-word brand,25.75
+192,Good Clinic,goodclinic,Simple two-word brand,25.75
+193,My Clinic,myclinic,Simple two-word brand,25.75
+194,One Clinic,oneclinic,Simple two-word brand,25.75
+195,Open Clinic,openclinic,Simple two-word brand,25.75
+196,Real Clinic,realclinic,Simple two-word brand,25.75
+197,Smart Clinic,smartclinic,Simple two-word brand,25.75
+198,True Clinic,trueclinic,Simple two-word brand,25.75
+199,Easy Doctor,easydoctor,Simple two-word brand,25.5
+200,Good Doctor,gooddoctor,Simple two-word brand,25.5
+201,Open Doctor,opendoctor,Simple two-word brand,25.5
+202,Real Doctor,realdoctor,Simple two-word brand,25.5
+203,Smart Doctor,smartdoctor,Simple two-word brand,25.5
+204,True Doctor,truedoctor,Simple two-word brand,25.5
+205,Clear Doctor,cleardoctor,Simple two-word brand,25.25
+206,Direct Care,directcare,Simple two-word brand,25.25
+207,Hello Doctor,hellodoctor,Simple two-word brand,25.25
+208,Modern Care,moderncare,Simple two-word brand,25.25
+209,Next Care,nextcare,Simple two-word brand,25.25
+210,Ready Doctor,readydoctor,Simple two-word brand,25.25
+211,Simple Doctor,simpledoctor,Simple two-word brand,25.25
+212,Whole Care,wholecare,Simple two-word brand,25.25
+213,Clear Clinic,clearclinic,Simple two-word brand,25.0
+214,Direct Health,directhealth,Simple two-word brand,25.0
+215,Hello Clinic,helloclinic,Simple two-word brand,25.0
+216,Modern Health,modernhealth,Simple two-word brand,25.0
+217,Next Health,nexthealth,Simple two-word brand,25.0
+218,Ready Clinic,readyclinic,Simple two-word brand,25.0
+219,Simple Clinic,simpleclinic,Simple two-word brand,25.0
+220,Whole Health,wholehealth,Simple two-word brand,25.0
+221,My Telehealth,mytelehealth,Telehealth and online care,25.0
+222,Tele Care,telecare,Telehealth and online care,25.0
+223,Tele Clinic,teleclinic,Telehealth and online care,25.0
+224,Tele Doctor,teledoctor,Telehealth and online care,25.0
+225,Tele Doctors,teledoctors,Telehealth and online care,25.0
+226,Tele Health,telehealth,Telehealth and online care,25.0
+227,Tele Medical,telemedical,Telehealth and online care,25.0
+228,Tele Practice,telepractice,Telehealth and online care,25.0
+229,My Tele Care,mytelecare,Telehealth and online care,25.0
+230,My Tele Clinic,myteleclinic,Telehealth and online care,25.0
+231,My Tele Doctor,myteledoctor,Telehealth and online care,25.0
+232,My Online Care,myonlinecare,Telehealth and online care,25.0
+233,My Online Clinic,myonlineclinic,Telehealth and online care,25.0
+234,My Online Doctor,myonlinedoctor,Telehealth and online care,25.0
+235,My Online Health,myonlinehealth,Telehealth and online care,25.0
+236,Online Care,onlinecare,Telehealth and online care,25.0
+237,Online Clinic,onlineclinic,Telehealth and online care,25.0
+238,Online Doctor,onlinedoctor,Telehealth and online care,25.0
+239,Online Health,onlinehealth,Telehealth and online care,25.0
+240,Virtual Care,virtualcare,Telehealth and online care,25.0
+241,Virtual Clinic,virtualclinic,Telehealth and online care,25.0
+242,Virtual Doctor,virtualdoctor,Telehealth and online care,25.0
+243,Virtual Health,virtualhealth,Telehealth and online care,25.0
+244,Digital Care,digitalcare,Telehealth and online care,25.0
+245,Digital Clinic,digitalclinic,Telehealth and online care,25.0
+246,Digital Health,digitalhealth,Telehealth and online care,25.0
+247,Connected Care,connectedcare,Telehealth and online care,25.0
+248,Connected Clinic,connectedclinic,Telehealth and online care,25.0
+249,Connected Health,connectedhealth,Telehealth and online care,25.0
+250,Care Online,careonline,Telehealth and online care,25.0
+251,Clinic Online,cliniconline,Telehealth and online care,25.0
+252,Doctor Online,doctoronline,Telehealth and online care,25.0
+253,Health Online,healthonline,Telehealth and online care,25.0
+254,Telehealth App,telehealthapp,Telehealth and online care,25.0
+255,Telehealth Home,telehealthhome,Telehealth and online care,25.0
+256,Telehealth Hub,telehealthhub,Telehealth and online care,25.0
+257,Telehealth One,telehealthone,Telehealth and online care,25.0
+258,Telehealth Online,telehealthonline,Telehealth and online care,25.0
+259,Telehealth Portal,telehealthportal,Telehealth and online care,25.0
+260,Telehealth Works,telehealthworks,Telehealth and online care,25.0
+261,Better Clinic,betterclinic,Simple two-word brand,24.75
+262,Bright Clinic,brightclinic,Simple two-word brand,24.75
+263,Direct Clinic,directclinic,Simple two-word brand,24.75
+264,Fresh Care,freshcare,Simple two-word brand,24.75
+265,Happy Care,happycare,Simple two-word brand,24.75
+266,Life Care,lifecare,Simple two-word brand,24.75
+267,Local Care,localcare,Simple two-word brand,24.75
+268,Next Clinic,nextclinic,Simple two-word brand,24.75
+269,Pure Care,purecare,Simple two-word brand,24.75
+270,Quick Care,quickcare,Simple two-word brand,24.75
+271,Strong Care,strongcare,Simple two-word brand,24.75
+272,Whole Clinic,wholeclinic,Simple two-word brand,24.75
+273,Better Doctor,betterdoctor,Simple two-word brand,24.5
+274,Bright Doctor,brightdoctor,Simple two-word brand,24.5
+275,Direct Doctor,directdoctor,Simple two-word brand,24.5
+276,Fresh Health,freshhealth,Simple two-word brand,24.5
+277,Happy Health,happyhealth,Simple two-word brand,24.5
+278,Life Health,lifehealth,Simple two-word brand,24.5
+279,Local Health,localhealth,Simple two-word brand,24.5
+280,Next Doctor,nextdoctor,Simple two-word brand,24.5
+281,Pure Health,purehealth,Simple two-word brand,24.5
+282,Quick Health,quickhealth,Simple two-word brand,24.5
+283,Strong Health,stronghealth,Simple two-word brand,24.5
+284,True Medical,truemedical,Simple two-word brand,24.5
+285,Family Care,familycare,Simple two-word brand,24.25
+286,Fresh Clinic,freshclinic,Simple two-word brand,24.25
+287,Happy Clinic,happyclinic,Simple two-word brand,24.25
+288,Home Care,homecare,Simple two-word brand,24.25
+289,Life Clinic,lifeclinic,Simple two-word brand,24.25
+290,Local Clinic,localclinic,Simple two-word brand,24.25
+291,New Care,newcare,Simple two-word brand,24.25
+292,Pure Clinic,pureclinic,Simple two-word brand,24.25
+293,Quick Clinic,quickclinic,Simple two-word brand,24.25
+294,Strong Clinic,strongclinic,Simple two-word brand,24.25
+295,Trusted Care,trustedcare,Simple two-word brand,24.25
+296,Whole Doctor,wholedoctor,Simple two-word brand,24.25
+297,Clear Medical,clearmedical,Simple two-word brand,24.0
+298,Everyday Care,everydaycare,Simple two-word brand,24.0
+299,Family Health,familyhealth,Simple two-word brand,24.0
+300,Fresh Doctor,freshdoctor,Simple two-word brand,24.0
+301,Happy Doctor,happydoctor,Simple two-word brand,24.0
+302,Home Health,homehealth,Simple two-word brand,24.0
+303,Life Doctor,lifedoctor,Simple two-word brand,24.0
+304,Local Doctor,localdoctor,Simple two-word brand,24.0
+305,New Health,newhealth,Simple two-word brand,24.0
+306,Pure Doctor,puredoctor,Simple two-word brand,24.0
+307,Quick Doctor,quickdoctor,Simple two-word brand,24.0
+308,Strong Doctor,strongdoctor,Simple two-word brand,24.0
+309,Trusted Health,trustedhealth,Simple two-word brand,24.0
+310,Better Medical,bettermedical,Simple two-word brand,23.75
+311,Connected Care,connectedcare,Simple two-word brand,23.75
+312,Everyday Health,everydayhealth,Simple two-word brand,23.75
+313,Family Clinic,familyclinic,Simple two-word brand,23.75
+314,Home Clinic,homeclinic,Simple two-word brand,23.75
+315,Honest Care,honestcare,Simple two-word brand,23.75
+316,New Clinic,newclinic,Simple two-word brand,23.75
+317,People Care,peoplecare,Simple two-word brand,23.75
+318,Prime Care,primecare,Simple two-word brand,23.75
+319,Real Medical,realmedical,Simple two-word brand,23.75
+320,Smart Medical,smartmedical,Simple two-word brand,23.75
+321,Total Care,totalcare,Simple two-word brand,23.75
+322,Trusted Clinic,trustedclinic,Simple two-word brand,23.75
+323,Better Practice,betterpractice,Simple two-word brand,23.5
+324,Bright Medical,brightmedical,Simple two-word brand,23.5
+325,Connected Health,connectedhealth,Simple two-word brand,23.5
+326,Family Doctor,familydoctor,Simple two-word brand,23.5
+327,Home Doctor,homedoctor,Simple two-word brand,23.5
+328,Honest Health,honesthealth,Simple two-word brand,23.5
+329,New Doctor,newdoctor,Simple two-word brand,23.5
+330,People Health,peoplehealth,Simple two-word brand,23.5
+331,Prime Health,primehealth,Simple two-word brand,23.5
+332,Total Health,totalhealth,Simple two-word brand,23.5
+333,Trusted Doctor,trusteddoctor,Simple two-word brand,23.5
+334,Clear Practice,clearpractice,Simple two-word brand,23.25
+335,Complete Care,completecare,Simple two-word brand,23.25
+336,Everyday Clinic,everydayclinic,Simple two-word brand,23.25
+337,Honest Clinic,honestclinic,Simple two-word brand,23.25
+338,Local Medical,localmedical,Simple two-word brand,23.25
+339,Main Care,maincare,Simple two-word brand,23.25
+340,Modern Clinic,modernclinic,Simple two-word brand,23.25
+341,People Clinic,peopleclinic,Simple two-word brand,23.25
+342,Prime Clinic,primeclinic,Simple two-word brand,23.25
+343,Pure Medical,puremedical,Simple two-word brand,23.25
+344,Quick Medical,quickmedical,Simple two-word brand,23.25
+345,Strong Medical,strongmedical,Simple two-word brand,23.25
+346,Total Clinic,totalclinic,Simple two-word brand,23.25
+347,Whole Medical,wholemedical,Simple two-word brand,23.25
+348,Complete Health,completehealth,Simple two-word brand,23.0
+349,Everyday Doctor,everydaydoctor,Simple two-word brand,23.0
+350,Honest Doctor,honestdoctor,Simple two-word brand,23.0
+351,Local Practice,localpractice,Simple two-word brand,23.0
+352,Main Health,mainhealth,Simple two-word brand,23.0
+353,Modern Doctor,moderndoctor,Simple two-word brand,23.0
+354,People Doctor,peopledoctor,Simple two-word brand,23.0
+355,Prime Doctor,primedoctor,Simple two-word brand,23.0
+356,Pure Practice,purepractice,Simple two-word brand,23.0
+357,Quick Practice,quickpractice,Simple two-word brand,23.0
+358,Strong Practice,strongpractice,Simple two-word brand,23.0
+359,Total Doctor,totaldoctor,Simple two-word brand,23.0
+360,Whole Practice,wholepractice,Simple two-word brand,23.0
+361,Complete Clinic,completeclinic,Simple two-word brand,22.75
+362,Everyday Medical,everydaymedical,Simple two-word brand,22.75
+363,Family Medical,familymedical,Simple two-word brand,22.75
+364,Honest Medical,honestmedical,Simple two-word brand,22.75
+365,Life Medical,lifemedical,Simple two-word brand,22.75
+366,Main Clinic,mainclinic,Simple two-word brand,22.75
+367,Modern Medical,modernmedical,Simple two-word brand,22.75
+368,People Medical,peoplemedical,Simple two-word brand,22.75
+369,Prime Medical,primemedical,Simple two-word brand,22.75
+370,Total Medical,totalmedical,Simple two-word brand,22.75
+371,Complete Doctor,completedoctor,Simple two-word brand,22.5
+372,Everyday Practice,everydaypractice,Simple two-word brand,22.5
+373,Family Practice,familypractice,Simple two-word brand,22.5
+374,Honest Practice,honestpractice,Simple two-word brand,22.5
+375,Life Practice,lifepractice,Simple two-word brand,22.5
+376,Main Doctor,maindoctor,Simple two-word brand,22.5
+377,Modern Practice,modernpractice,Simple two-word brand,22.5
+378,People Practice,peoplepractice,Simple two-word brand,22.5
+379,Prime Practice,primepractice,Simple two-word brand,22.5
+380,Total Practice,totalpractice,Simple two-word brand,22.5
+381,Care App,careapp,Clear platform name,25.25
+382,Care Hub,carehub,Clear platform name,25.25
+383,Care Now,carenow,Clear platform name,25.25
+384,Care Desk,caredesk,Clear platform name,25.0
+385,Care Home,carehome,Clear platform name,25.0
+386,Care Link,carelink,Clear platform name,25.0
+387,Care One,careone,Clear platform name,24.75
+388,Clinic App,clinicapp,Clear platform name,24.75
+389,Clinic Hub,clinichub,Clear platform name,24.75
+390,Clinic Now,clinicnow,Clear platform name,24.75
+391,Doctor App,doctorapp,Clear platform name,24.75
+392,Doctor Hub,doctorhub,Clear platform name,24.75
+393,Doctor Now,doctornow,Clear platform name,24.75
+394,Health App,healthapp,Clear platform name,24.75
+395,Health Hub,healthhub,Clear platform name,24.75
+396,Health Now,healthnow,Clear platform name,24.75
+397,Care Access,careaccess,Clear platform name,24.5
+398,Care Online,careonline,Clear platform name,24.5
+399,Care Portal,careportal,Clear platform name,24.5
+400,Clinic Desk,clinicdesk,Clear platform name,24.5
+401,Clinic Home,clinichome,Clear platform name,24.5
+402,Clinic Link,cliniclink,Clear platform name,24.5
+403,Doctor Desk,doctordesk,Clear platform name,24.5
+404,Doctor Home,doctorhome,Clear platform name,24.5
+405,Doctor Link,doctorlink,Clear platform name,24.5
+406,Health Desk,healthdesk,Clear platform name,24.5
+407,Health Home,healthhome,Clear platform name,24.5
+408,Health Link,healthlink,Clear platform name,24.5
+409,Care Connect,careconnect,Clear platform name,24.25
+410,Care Office,careoffice,Clear platform name,24.25
+411,Care Team,careteam,Clear platform name,24.25
+412,Clinic Access,clinicaccess,Clear platform name,24.0
+413,Clinic Connect,clinicconnect,Clear platform name,24.0
+414,Clinic Office,clinicoffice,Clear platform name,24.0
+415,Clinic Online,cliniconline,Clear platform name,24.0
+416,Clinic Portal,clinicportal,Clear platform name,24.0
+417,Doctor Access,doctoraccess,Clear platform name,24.0
+418,Doctor Connect,doctorconnect,Clear platform name,24.0
+419,Doctor Office,doctoroffice,Clear platform name,24.0
+420,Doctor Online,doctoronline,Clear platform name,24.0
+421,Doctor Portal,doctorportal,Clear platform name,24.0
+422,Health Access,healthaccess,Clear platform name,24.0
+423,Health Connect,healthconnect,Clear platform name,24.0
+424,Health Office,healthoffice,Clear platform name,24.0
+425,Health Online,healthonline,Clear platform name,24.0
+426,Health Portal,healthportal,Clear platform name,24.0
+427,Practice App,practiceapp,Clear platform name,24.0
+428,Practice Hub,practicehub,Clear platform name,24.0
+429,Practice Desk,practicedesk,Clear platform name,23.75
+430,Practice Link,practicelink,Clear platform name,23.75
+431,Care Base,carebase,Clear platform name,23.5
+432,Care Book,carebook,Clear platform name,23.5
+433,Care Box,carebox,Clear platform name,23.5
+434,Care Door,caredoor,Clear platform name,23.5
+435,Care Easy,careeasy,Clear platform name,23.5
+436,Care File,carefile,Clear platform name,23.5
+437,Care Flow,careflow,Clear platform name,23.5
+438,Care Guide,careguide,Clear platform name,23.5
+439,Care House,carehouse,Clear platform name,23.5
+440,Care Live,carelive,Clear platform name,23.5
+441,Care Login,carelogin,Clear platform name,23.5
+442,Care Map,caremap,Clear platform name,23.5
+443,Care Path,carepath,Clear platform name,23.5
+444,Care Place,careplace,Clear platform name,23.5
+445,Care Plan,careplan,Clear platform name,23.5
+446,Care Point,carepoint,Clear platform name,23.5
+447,Care Ready,careready,Clear platform name,23.5
+448,Care Room,careroom,Clear platform name,23.5
+449,Care Start,carestart,Clear platform name,23.5
+450,Care Suite,caresuite,Clear platform name,23.5
+451,Care Sync,caresync,Clear platform name,23.5
+452,Care Track,caretrack,Clear platform name,23.5
+453,Care View,careview,Clear platform name,23.5
+454,Care Way,careway,Clear platform name,23.5
+455,Care Web,careweb,Clear platform name,23.5
+456,Care Works,careworks,Clear platform name,23.5
+457,Clinic One,clinicone,Clear platform name,23.5
+458,Doctor One,doctorone,Clear platform name,23.5
+459,Health One,healthone,Clear platform name,23.5
+460,Medical App,medicalapp,Clear platform name,23.5
+461,Medical Hub,medicalhub,Clear platform name,23.5
+462,Medical Now,medicalnow,Clear platform name,23.5
+463,Practice Access,practiceaccess,Clear platform name,23.5
+464,Practice Portal,practiceportal,Clear platform name,23.5
+465,Care Choice,carechoice,Clear platform name,23.25
+466,Care First,carefirst,Clear platform name,23.25
+467,Care Office,careoffice,Clear platform name,23.25
+468,Care Today,caretoday,Clear platform name,23.25
+469,Care Tools,caretools,Clear platform name,23.25
+470,Care Town,caretown,Clear platform name,23.25
+471,Care World,careworld,Clear platform name,23.25
+472,Clinic Base,clinicbase,Clear platform name,23.25
+473,Clinic Book,clinicbook,Clear platform name,23.25
+474,Clinic Box,clinicbox,Clear platform name,23.25
+475,Clinic Door,clinicdoor,Clear platform name,23.25
+476,Clinic Easy,cliniceasy,Clear platform name,23.25
+477,Clinic File,clinicfile,Clear platform name,23.25
+478,Clinic Flow,clinicflow,Clear platform name,23.25
+479,Clinic Guide,clinicguide,Clear platform name,23.25
+480,Clinic House,clinichouse,Clear platform name,23.25
+481,Clinic Live,cliniclive,Clear platform name,23.25
+482,Clinic Login,cliniclogin,Clear platform name,23.25
+483,Clinic Map,clinicmap,Clear platform name,23.25
+484,Clinic Path,clinicpath,Clear platform name,23.25
+485,Clinic Place,clinicplace,Clear platform name,23.25
+486,Clinic Plan,clinicplan,Clear platform name,23.25
+487,Clinic Point,clinicpoint,Clear platform name,23.25
+488,Clinic Ready,clinicready,Clear platform name,23.25
+489,Clinic Room,clinicroom,Clear platform name,23.25
+490,Clinic Start,clinicstart,Clear platform name,23.25
+491,Clinic Suite,clinicsuite,Clear platform name,23.25
+492,Clinic Sync,clinicsync,Clear platform name,23.25
+493,Clinic Track,clinictrack,Clear platform name,23.25
+494,Clinic View,clinicview,Clear platform name,23.25
+495,Clinic Way,clinicway,Clear platform name,23.25
+496,Clinic Web,clinicweb,Clear platform name,23.25
+497,Clinic Works,clinicworks,Clear platform name,23.25
+498,Doctor Base,doctorbase,Clear platform name,23.25
+499,Doctor Book,doctorbook,Clear platform name,23.25
+500,Doctor Door,doctordoor,Clear platform name,23.25
+501,Doctor Easy,doctoreasy,Clear platform name,23.25
+502,Doctor Flow,doctorflow,Clear platform name,23.25
+503,Doctor Guide,doctorguide,Clear platform name,23.25
+504,Doctor House,doctorhouse,Clear platform name,23.25
+505,Doctor Live,doctorlive,Clear platform name,23.25
+506,Doctor Map,doctormap,Clear platform name,23.25
+507,Doctor Path,doctorpath,Clear platform name,23.25
+508,Doctor Place,doctorplace,Clear platform name,23.25
+509,Doctor Plan,doctorplan,Clear platform name,23.25
+510,Doctor Point,doctorpoint,Clear platform name,23.25
+511,Doctor Ready,doctorready,Clear platform name,23.25
+512,Doctor Room,doctorroom,Clear platform name,23.25
+513,Doctor Start,doctorstart,Clear platform name,23.25
+514,Doctor Sync,doctorsync,Clear platform name,23.25
+515,Doctor Track,doctortrack,Clear platform name,23.25
+516,Doctor View,doctorview,Clear platform name,23.25
+517,Doctor Way,doctorway,Clear platform name,23.25
+518,Doctor Web,doctorweb,Clear platform name,23.25
+519,Doctor Works,doctorworks,Clear platform name,23.25
+520,Health Base,healthbase,Clear platform name,23.25
+521,Health Book,healthbook,Clear platform name,23.25
+522,Health Box,healthbox,Clear platform name,23.25
+523,Health Door,healthdoor,Clear platform name,23.25
+524,Health Easy,healtheasy,Clear platform name,23.25
+525,Health File,healthfile,Clear platform name,23.25
+526,Health Flow,healthflow,Clear platform name,23.25
+527,Health Guide,healthguide,Clear platform name,23.25
+528,Health House,healthhouse,Clear platform name,23.25
+529,Health Live,healthlive,Clear platform name,23.25
+530,Health Login,healthlogin,Clear platform name,23.25
+531,Health Map,healthmap,Clear platform name,23.25
+532,Health Path,healthpath,Clear platform name,23.25
+533,Health Place,healthplace,Clear platform name,23.25
+534,Health Plan,healthplan,Clear platform name,23.25
+535,Health Point,healthpoint,Clear platform name,23.25
+536,Health Ready,healthready,Clear platform name,23.25
+537,Health Room,healthroom,Clear platform name,23.25
+538,Health Start,healthstart,Clear platform name,23.25
+539,Health Suite,healthsuite,Clear platform name,23.25
+540,Health Sync,healthsync,Clear platform name,23.25
+541,Health Track,healthtrack,Clear platform name,23.25
+542,Health View,healthview,Clear platform name,23.25
+543,Health Way,healthway,Clear platform name,23.25
+544,Health Web,healthweb,Clear platform name,23.25
+545,Health Works,healthworks,Clear platform name,23.25
+546,Medical Desk,medicaldesk,Clear platform name,23.25
+547,Medical Home,medicalhome,Clear platform name,23.25
+548,Medical Link,medicallink,Clear platform name,23.25
+549,Medical Portal,medicalportal,Clear platform name,23.25
+550,Practice Connect,practiceconnect,Clear platform name,23.25
+551,Practice Office,practiceoffice,Clear platform name,23.25
+552,Practice Team,practiceteam,Clear platform name,23.25
+553,Clinic Choice,clinicchoice,Clear platform name,23.0
+554,Clinic First,clinicfirst,Clear platform name,23.0
+555,Clinic Today,clinictoday,Clear platform name,23.0
+556,Clinic Tools,clinictools,Clear platform name,23.0
+557,Clinic Town,clinictown,Clear platform name,23.0
+558,Clinic World,clinicworld,Clear platform name,23.0
+559,Doctor Choice,doctorchoice,Clear platform name,23.0
+560,Doctor First,doctorfirst,Clear platform name,23.0
+561,Doctor Today,doctortoday,Clear platform name,23.0
+562,Doctor Town,doctortown,Clear platform name,23.0
+563,Doctor World,doctorworld,Clear platform name,23.0
+564,Health Choice,healthchoice,Clear platform name,23.0
+565,Health First,healthfirst,Clear platform name,23.0
+566,Health Today,healthtoday,Clear platform name,23.0
+567,Health Tools,healthtools,Clear platform name,23.0
+568,Health Town,healthtown,Clear platform name,23.0
+569,Health World,healthworld,Clear platform name,23.0
+570,Medical Access,medicalaccess,Clear platform name,23.0
+571,Medical Connect,medicalconnect,Clear platform name,23.0
+572,Medical Office,medicaloffice,Clear platform name,23.0
+573,Medical Online,medicalonline,Clear platform name,23.0
+574,Medical Team,medicalteam,Clear platform name,23.0
+575,Practice Online,practiceonline,Clear platform name,23.0
+576,Medical Base,medicalbase,Clear platform name,22.75
+577,Medical Book,medicalbook,Clear platform name,22.75
+578,Medical Cloud,medicalcloud,Clear platform name,22.75
+579,Medical Door,medicaldoor,Clear platform name,22.75
+580,Medical File,medicalfile,Clear platform name,22.75
+581,Medical Flow,medicalflow,Clear platform name,22.75
+582,Medical Guide,medicalguide,Clear platform name,22.75
+583,Medical House,medicalhouse,Clear platform name,22.75
+584,Medical Live,medicallive,Clear platform name,22.75
+585,Medical Login,medicallogin,Clear platform name,22.75
+586,Medical Map,medicalmap,Clear platform name,22.75
+587,Medical Path,medicalpath,Clear platform name,22.75
+588,Medical Place,medicalplace,Clear platform name,22.75
+589,Medical Plan,medicalplan,Clear platform name,22.75
+590,Medical Point,medicalpoint,Clear platform name,22.75
+591,Medical Ready,medicalready,Clear platform name,22.75
+592,Medical Room,medicalroom,Clear platform name,22.75
+593,Medical Start,medicalstart,Clear platform name,22.75
+594,Medical Suite,medicalsuite,Clear platform name,22.75
+595,Medical Sync,medicalsync,Clear platform name,22.75
+596,Medical Track,medicaltrack,Clear platform name,22.75
+597,Medical View,medicalview,Clear platform name,22.75
+598,Medical Way,medicalway,Clear platform name,22.75
+599,Medical Web,medicalweb,Clear platform name,22.75
+600,Medical Works,medicalworks,Clear platform name,22.75
+601,Practice Base,practicebase,Clear platform name,22.75
+602,Practice Board,practiceboard,Clear platform name,22.75
+603,Practice Book,practicebook,Clear platform name,22.75
+604,Practice Cloud,practicecloud,Clear platform name,22.75
+605,Practice Flow,practiceflow,Clear platform name,22.75
+606,Practice Guide,practiceguide,Clear platform name,22.75
+607,Practice Login,practicelogin,Clear platform name,22.75
+608,Practice Map,practicemap,Clear platform name,22.75
+609,Practice Plan,practiceplan,Clear platform name,22.75
+610,Practice Ready,practiceready,Clear platform name,22.75
+611,Practice Start,practicestart,Clear platform name,22.75
+612,Practice Suite,practicesuite,Clear platform name,22.75
+613,Practice Sync,practicesync,Clear platform name,22.75
+614,Practice View,practiceview,Clear platform name,22.75
+615,Practice Web,practiceweb,Clear platform name,22.75
+616,Practice Works,practiceworks,Clear platform name,22.75
+617,Care Anywhere,careanywhere,Clear platform name,22.5
+618,Care Bridge,carebridge,Clear platform name,22.5
+619,Care Center,carecenter,Clear platform name,22.5
+620,Care Circle,carecircle,Clear platform name,22.5
+621,Care Cloud,carecloud,Clear platform name,22.5
+622,Care Direct,caredirect,Clear platform name,22.5
+623,Care Group,caregroup,Clear platform name,22.5
+624,Care Line,careline,Clear platform name,22.5
+625,Care Network,carenetwork,Clear platform name,22.5
+626,Care Partners,carepartners,Clear platform name,22.5
+627,Care Route,careroute,Clear platform name,22.5
+628,Care Side,careside,Clear platform name,22.5
+629,Care Source,caresource,Clear platform name,22.5
+630,Care Space,carespace,Clear platform name,22.5
+631,Care Station,carestation,Clear platform name,22.5
+632,Care Street,carestreet,Clear platform name,22.5
+633,Care System,caresystem,Clear platform name,22.5
+634,Doctor First,doctorfirst,Clear platform name,22.5
+635,Doctor Tools,doctortools,Clear platform name,22.5
+636,Medical Choice,medicalchoice,Clear platform name,22.5
+637,Medical Direct,medicaldirect,Clear platform name,22.5
+638,Medical First,medicalfirst,Clear platform name,22.5
+639,Medical Today,medicaltoday,Clear platform name,22.5
+640,Medical Tools,medicaltools,Clear platform name,22.5
+641,Medical Town,medicaltown,Clear platform name,22.5
+642,Medical World,medicalworld,Clear platform name,22.5
+643,Practice Choice,practicechoice,Clear platform name,22.5
+644,Practice Direct,practicedirect,Clear platform name,22.5
+645,Practice First,practicefirst,Clear platform name,22.5
+646,Practice Point,practicepoint,Clear platform name,22.5
+647,Practice Tools,practicetools,Clear platform name,22.5
+648,Practice Track,practicetrack,Clear platform name,22.5
+649,Practice Way,practiceway,Clear platform name,22.5
+650,Practice World,practiceworld,Clear platform name,22.5
+651,Clinic Anywhere,clinicanywhere,Clear platform name,22.25
+652,Clinic Bridge,clinicbridge,Clear platform name,22.25
+653,Clinic Center,cliniccenter,Clear platform name,22.25
+654,Clinic Circle,cliniccircle,Clear platform name,22.25
+655,Clinic Cloud,cliniccloud,Clear platform name,22.25
+656,Clinic Direct,clinicdirect,Clear platform name,22.25
+657,Clinic Group,clinicgroup,Clear platform name,22.25
+658,Clinic Line,clinicline,Clear platform name,22.25
+659,Clinic Network,clinicnetwork,Clear platform name,22.25
+660,Clinic Partners,clinicpartners,Clear platform name,22.25
+661,Clinic Route,clinicroute,Clear platform name,22.25
+662,Clinic Side,clinicside,Clear platform name,22.25
+663,Clinic Source,clinicsource,Clear platform name,22.25
+664,Clinic Space,clinicspace,Clear platform name,22.25
+665,Clinic Station,clinicstation,Clear platform name,22.25
+666,Clinic Street,clinicstreet,Clear platform name,22.25
+667,Clinic System,clinicsystem,Clear platform name,22.25
+668,Doctor Anywhere,doctoranywhere,Clear platform name,22.25
+669,Doctor Bridge,doctorbridge,Clear platform name,22.25
+670,Doctor Center,doctorcenter,Clear platform name,22.25
+671,Doctor Circle,doctorcircle,Clear platform name,22.25
+672,Doctor Direct,doctordirect,Clear platform name,22.25
+673,Doctor Line,doctorline,Clear platform name,22.25
+674,Doctor Route,doctorroute,Clear platform name,22.25
+675,Doctor Side,doctorside,Clear platform name,22.25
+676,Doctor Source,doctorsource,Clear platform name,22.25
+677,Doctor Space,doctorspace,Clear platform name,22.25
+678,Doctor Street,doctorstreet,Clear platform name,22.25
+679,Health Anywhere,healthanywhere,Clear platform name,22.25
+680,Health Bridge,healthbridge,Clear platform name,22.25
+681,Health Center,healthcenter,Clear platform name,22.25
+682,Health Circle,healthcircle,Clear platform name,22.25
+683,Health Cloud,healthcloud,Clear platform name,22.25
+684,Health Direct,healthdirect,Clear platform name,22.25
+685,Health Group,healthgroup,Clear platform name,22.25
+686,Health Line,healthline,Clear platform name,22.25
+687,Health Network,healthnetwork,Clear platform name,22.25
+688,Health Partners,healthpartners,Clear platform name,22.25
+689,Health Route,healthroute,Clear platform name,22.25
+690,Health Side,healthside,Clear platform name,22.25
+691,Health Source,healthsource,Clear platform name,22.25
+692,Health Space,healthspace,Clear platform name,22.25
+693,Health Station,healthstation,Clear platform name,22.25
+694,Health Street,healthstreet,Clear platform name,22.25
+695,Health System,healthsystem,Clear platform name,22.25
+696,Practice Center,practicecenter,Clear platform name,22.25
+697,Practice Group,practicegroup,Clear platform name,22.25
+698,Practice Line,practiceline,Clear platform name,22.25
+699,Practice Network,practicenetwork,Clear platform name,22.25
+700,Practice Partners,practicepartners,Clear platform name,22.25
+701,Practice Route,practiceroute,Clear platform name,22.25
+702,Practice Side,practiceside,Clear platform name,22.25
+703,Practice Source,practicesource,Clear platform name,22.25
+704,Practice Space,practicespace,Clear platform name,22.25
+705,Practice Station,practicestation,Clear platform name,22.25
+706,Practice Street,practicestreet,Clear platform name,22.25
+707,Practice System,practicesystem,Clear platform name,22.25
+708,Book Care,bookcare,Action name,24.75
+709,Get Care,getcare,Action name,24.75
+710,Go Care,gocare,Action name,24.75
+711,See Care,seecare,Action name,24.75
+712,Get Health,gethealth,Action name,24.5
+713,Go Health,gohealth,Action name,24.5
+714,See Health,seehealth,Action name,24.5
+715,Ask Care,askcare,Action name,24.25
+716,Find Care,findcare,Action name,24.25
+717,Get Doctor,getdoctor,Action name,24.25
+718,Go Doctor,godoctor,Action name,24.25
+719,See Doctor,seedoctor,Action name,24.25
+720,Start Care,startcare,Action name,24.25
+721,Visit Care,visitcare,Action name,24.25
+722,Ask Doctor,askdoctor,Action name,24.0
+723,Call Care,callcare,Action name,24.0
+724,Find Doctor,finddoctor,Action name,24.0
+725,Meet Care,meetcare,Action name,24.0
+726,Meet Doctor,meetdoctor,Action name,24.0
+727,Go Visit,govisit,Action name,23.75
+728,Start Doctor,startdoctor,Action name,23.75
+729,Get Visit,getvisit,Action name,23.5
+730,Go Clinic,goclinic,Action name,23.5
+731,Join Care,joincare,Action name,23.5
+732,See Visit,seevisit,Action name,23.5
+733,Ask Health,askhealth,Action name,23.25
+734,Get Clinic,getclinic,Action name,23.25
+735,See Clinic,seeclinic,Action name,23.25
+736,Choose Care,choosecare,Action name,23.0
+737,Find Health,findhealth,Action name,23.0
+738,Join Doctor,joindoctor,Action name,23.0
+739,Start Health,starthealth,Action name,22.75
+740,Visit Health,visithealth,Action name,22.75
+741,Choose Doctor,choosedoctor,Action name,22.5
+742,Book Visit,bookvisit,Action name,22.25
+743,Find Visit,findvisit,Action name,22.25
+744,Go Medical,gomedical,Action name,22.25
+745,Book Clinic,bookclinic,Action name,22.0
+746,Find Clinic,findclinic,Action name,22.0
+747,Get Medical,getmedical,Action name,22.0
+748,Go Provider,goprovider,Action name,22.0
+749,Join Health,joinhealth,Action name,22.0
+750,See Medical,seemedical,Action name,22.0
+751,Start Visit,startvisit,Action name,22.0
+752,Get Provider,getprovider,Action name,21.75
+753,See Provider,seeprovider,Action name,21.75
+754,Start Clinic,startclinic,Action name,21.75
+755,Visit Clinic,visitclinic,Action name,21.75
+756,Your Care,yourcare,Plain-English brand,23.5
+757,All In Care,allincare,Plain-English brand,23.25
+758,Care In One,careinone,Plain-English brand,23.25
+759,Care Corner,carecorner,Plain-English brand,23.0
+760,Care For All,careforall,Plain-English brand,23.0
+761,Care Street,carestreet,Plain-English brand,23.0
+762,Care United,careunited,Plain-English brand,23.0
+763,Your Clinic,yourclinic,Plain-English brand,23.0
+764,Your Doctor,yourdoctor,Plain-English brand,23.0
+765,Your Health,yourhealth,Plain-English brand,23.0
+766,All In Clinic,allinclinic,Plain-English brand,22.75
+767,All In Health,allinhealth,Plain-English brand,22.75
+768,Clinic House,clinichouse,Plain-English brand,22.75
+769,Clinic In One,clinicinone,Plain-English brand,22.75
+770,Clinic Works,clinicworks,Plain-English brand,22.75
+771,Doctor House,doctorhouse,Plain-English brand,22.75
+772,Doctor Works,doctorworks,Plain-English brand,22.75
+773,Health In One,healthinone,Plain-English brand,22.75
+774,Total Clinic,totalclinic,Plain-English brand,22.75
+775,Care Made Easy,caremadeeasy,Plain-English brand,22.5
+776,Care Together,caretogether,Plain-English brand,22.5
+777,Clinic Corner,cliniccorner,Plain-English brand,22.5
+778,Clinic For All,clinicforall,Plain-English brand,22.5
+779,Clinic Street,clinicstreet,Plain-English brand,22.5
+780,Doctor Corner,doctorcorner,Plain-English brand,22.5
+781,Doctor Street,doctorstreet,Plain-English brand,22.5
+782,Health Corner,healthcorner,Plain-English brand,22.5
+783,Health For All,healthforall,Plain-English brand,22.5
+784,Health Street,healthstreet,Plain-English brand,22.5
+785,Health United,healthunited,Plain-English brand,22.5
+786,Care Front Door,carefrontdoor,Plain-English brand,22.25
+787,Clinics United,clinicsunited,Plain-English brand,22.25
+788,Doctors For All,doctorsforall,Plain-English brand,22.25
+789,Doctors United,doctorsunited,Plain-English brand,22.25
+790,Care Made Simple,caremadesimple,Plain-English brand,22.0
+791,Clinic Front Door,clinicfrontdoor,Plain-English brand,22.0
+792,Clinic Made Easy,clinicmadeeasy,Plain-English brand,22.0
+793,Clinic Made Simple,clinicmadesimple,Plain-English brand,22.0
+794,Clinics Together,clinicstogether,Plain-English brand,22.0
+795,Complete Clinic,completeclinic,Plain-English brand,22.0
+796,Care AtHome,careathome,Access and convenience,23.0
+797,Care OnCall,careoncall,Access and convenience,23.0
+798,Care OnTime,careontime,Access and convenience,23.0
+799,Care OnDemand,careondemand,Access and convenience,22.5
+800,Health AtHome,healthathome,Access and convenience,22.5
