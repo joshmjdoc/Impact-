@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [0, 1, 2, 3, 4, 5, 6, 7]
+        batch: [0, 1, 2, 3, 4, 5, 6]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -32,7 +32,7 @@ jobs:
           --input shortlist_400.csv
           --output io-verified/batch-${{ matrix.batch }}.csv
           --batch-index ${{ matrix.batch }}
-          --batch-count 8
+          --batch-count 7
       - uses: actions/upload-artifact@v4
         with:
           name: io-verified-${{ matrix.batch }}
