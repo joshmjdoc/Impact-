@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check .com, .io, and .app availability against authoritative RDAP registries."""
+"""Check .com, .io, and .app availability against authoritative registry RDAP."""
 
 from __future__ import annotations
 
@@ -18,49 +18,33 @@ from urllib.parse import quote
 import requests
 
 TLDS = ("com", "io", "app")
-IANA_BOOTSTRAP = "https://data.iana.org/rdap/dns.json"
+RDAP_BASES = {
+    "com": "https://rdap.verisign.com/com/v1/",
+    "io": "https://rdap.identitydigital.services/rdap/",
+    "app": "https://rdap.nic.google/",
+}
 HEADERS = {
     "User-Agent": "ImpactHealth-DomainResearch/1.0 (domain availability research)",
     "Accept": "application/rdap+json, application/json;q=0.9, */*;q=0.1",
-}
-FALLBACK_RDAP = {
-    "com": "https://rdap.verisign.com/com/v1/",
-    "app": "https://rdap.nic.google/",
 }
 _thread_local = threading.local()
 
 
 def session() -> requests.Session:
-    s = getattr(_thread_local, "session", None)
-    if s is None:
-        s = requests.Session()
-        s.headers.update(HEADERS)
-        _thread_local.session = s
-    return s
+    value = getattr(_thread_local, "session", None)
+    if value is None:
+        value = requests.Session()
+        value.headers.update(HEADERS)
+        _thread_local.session = value
+    return value
 
 
-def fetch_rdap_map() -> dict[str, str]:
-    response = requests.get(IANA_BOOTSTRAP, headers=HEADERS, timeout=30)
-    response.raise_for_status()
-    payload = response.json()
-    mapping: dict[str, str] = {}
-    for tlds, servers in payload.get("services", []):
-        if not servers:
-            continue
-        base = str(servers[0]).rstrip("/") + "/"
-        for tld in tlds:
-            mapping[str(tld).lower()] = base
-    for tld, base in FALLBACK_RDAP.items():
-        mapping.setdefault(tld, base)
-    return mapping
+def rdap_url(tld: str, domain: str) -> str:
+    return RDAP_BASES[tld].rstrip("/") + "/domain/" + quote(domain, safe=".-")
 
 
-def query_url(base: str, domain: str) -> str:
-    return base.rstrip("/") + "/domain/" + quote(domain, safe=".-")
-
-
-def google_doh(domain: str) -> tuple[str, str]:
-    """Conservative DNS fallback. Never labels DNS-only NXDOMAIN as confirmed available."""
+def dns_fallback(domain: str) -> tuple[str, str]:
+    """Conservative fallback: DNS can confirm use, but not registrar inventory."""
     try:
         response = session().get(
             "https://dns.google/resolve",
@@ -69,47 +53,41 @@ def google_doh(domain: str) -> tuple[str, str]:
         )
         if response.status_code != 200:
             return "unknown", f"doh_http_{response.status_code}"
-        data = response.json()
-        status = data.get("Status")
-        answers = data.get("Answer") or []
-        authority = data.get("Authority") or []
-        has_ns = any(item.get("type") == 2 for item in answers)
-        has_soa = any(item.get("type") == 6 for item in authority)
-        if status == 0 and has_ns:
+        payload = response.json()
+        status = payload.get("Status")
+        answers = payload.get("Answer") or []
+        authority = payload.get("Authority") or []
+        if status == 0 and any(item.get("type") == 2 for item in answers):
             return "taken", "google_doh_ns"
-        if status == 3 and has_soa:
+        if status == 3 and any(item.get("type") == 6 for item in authority):
             return "likely_available", "google_doh_nxdomain"
         return "unknown", f"google_doh_status_{status}"
     except Exception as exc:
         return "unknown", f"google_doh_error:{type(exc).__name__}"
 
 
-def check_domain(domain: str, base: str | None) -> dict[str, str]:
-    if not base:
-        return {"status": "unknown", "source": "no_rdap_server", "http": ""}
-
-    url = query_url(base, domain)
+def check_domain(domain: str, tld: str) -> dict[str, str]:
+    url = rdap_url(tld, domain)
     last_error = ""
-    for attempt in range(5):
+    for attempt in range(6):
         try:
             if attempt == 0:
-                time.sleep(random.uniform(0.0, 0.18))
+                time.sleep(random.uniform(0.0, 0.25))
             response = session().get(url, timeout=25, allow_redirects=True)
             code = response.status_code
             if code == 200:
-                return {"status": "taken", "source": f"authoritative_rdap:{base}", "http": "200"}
+                return {"status": "taken", "source": f"authoritative_rdap:{RDAP_BASES[tld]}", "http": "200"}
             if code == 404:
-                return {"status": "available", "source": f"authoritative_rdap:{base}", "http": "404"}
+                return {"status": "available", "source": f"authoritative_rdap:{RDAP_BASES[tld]}", "http": "404"}
             if code in (429, 500, 502, 503, 504):
-                wait = min(18, (2 ** attempt) + random.uniform(0.2, 1.2))
                 last_error = f"http_{code}"
-                time.sleep(wait)
+                time.sleep(min(25, (2 ** attempt) + random.uniform(0.3, 1.5)))
                 continue
             last_error = f"http_{code}"
             break
         except requests.RequestException as exc:
-            last_error = f"{type(exc).__name__}"
-            time.sleep(min(15, (2 ** attempt) + random.uniform(0.2, 1.0)))
+            last_error = type(exc).__name__
+            time.sleep(min(20, (2 ** attempt) + random.uniform(0.3, 1.2)))
 
     try:
         proxy = "https://rdap.org/domain/" + quote(domain, safe=".-")
@@ -121,12 +99,8 @@ def check_domain(domain: str, base: str | None) -> dict[str, str]:
     except requests.RequestException:
         pass
 
-    dns_status, dns_source = google_doh(domain)
-    return {
-        "status": dns_status,
-        "source": f"{dns_source};rdap_error={last_error}",
-        "http": "",
-    }
+    status, source = dns_fallback(domain)
+    return {"status": status, "source": f"{source};rdap_error={last_error}", "http": ""}
 
 
 def main() -> None:
@@ -140,79 +114,55 @@ def main() -> None:
 
     with open(args.input, newline="", encoding="utf-8") as handle:
         all_rows = list(csv.DictReader(handle))
+    rows = [row for row in all_rows if (int(row["rank"]) - 1) % args.batch_count == args.batch_index]
 
-    rows = [
-        row for row in all_rows
-        if (int(row["rank"]) - 1) % args.batch_count == args.batch_index
-    ]
-
-    rdap_map = fetch_rdap_map()
-    missing = [tld for tld in TLDS if not rdap_map.get(tld)]
-    if missing:
-        raise RuntimeError(f"IANA RDAP bootstrap had no server for: {missing}")
-
-    tasks: dict[Any, tuple[int, str, str]] = {}
+    futures: dict[Any, tuple[int, str]] = {}
     results: dict[tuple[int, str], dict[str, str]] = {}
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         for row in rows:
             rank = int(row["rank"])
             label = row["label"].strip().lower()
             for tld in TLDS:
-                domain = f"{label}.{tld}"
-                future = executor.submit(check_domain, domain, rdap_map.get(tld))
-                tasks[future] = (rank, tld, domain)
-
+                futures[executor.submit(check_domain, f"{label}.{tld}", tld)] = (rank, tld)
         completed = 0
-        for future in as_completed(tasks):
-            rank, tld, domain = tasks[future]
+        for future in as_completed(futures):
+            rank, tld = futures[future]
             try:
-                outcome = future.result()
+                results[(rank, tld)] = future.result()
             except Exception as exc:
-                outcome = {
-                    "status": "unknown",
-                    "source": f"worker_error:{type(exc).__name__}",
-                    "http": "",
-                }
-            results[(rank, tld)] = outcome
+                results[(rank, tld)] = {"status": "unknown", "source": f"worker_error:{type(exc).__name__}"}
             completed += 1
-            if completed % 50 == 0 or completed == len(tasks):
-                print(f"batch {args.batch_index}: {completed}/{len(tasks)} lookups complete", flush=True)
+            if completed % 50 == 0 or completed == len(futures):
+                print(f"batch {args.batch_index}: {completed}/{len(futures)}", flush=True)
 
     checked = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    fieldnames = [
+    fields = [
         "rank", "display", "label", "category", "score",
         "com_status", "io_status", "app_status",
-        "com_source", "io_source", "app_source",
-        "checked_utc",
+        "com_source", "io_source", "app_source", "checked_utc",
     ]
-    output_rows: list[dict[str, str]] = []
+    output_rows = []
     for row in sorted(rows, key=lambda item: int(item["rank"])):
         rank = int(row["rank"])
-        output = {
-            "rank": row["rank"],
-            "display": row["display"],
-            "label": row["label"],
-            "category": row["category"],
-            "score": row["score"],
-            "checked_utc": checked,
-        }
+        output = {key: row[key] for key in ("rank", "display", "label", "category", "score")}
+        output["checked_utc"] = checked
         for tld in TLDS:
-            outcome = results.get((rank, tld), {"status": "unknown", "source": "missing_result"})
-            output[f"{tld}_status"] = outcome.get("status", "unknown")
-            output[f"{tld}_source"] = outcome.get("source", "")
+            result = results.get((rank, tld), {"status": "unknown", "source": "missing_result"})
+            output[f"{tld}_status"] = result.get("status", "unknown")
+            output[f"{tld}_source"] = result.get("source", "")
         output_rows.append(output)
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         writer.writerows(output_rows)
 
     counts: dict[str, int] = {}
-    for output in output_rows:
+    for row in output_rows:
         for tld in TLDS:
-            key = f"{tld}:{output[f'{tld}_status']}"
+            key = f"{tld}:{row[f'{tld}_status']}"
             counts[key] = counts.get(key, 0) + 1
     print(json.dumps({"batch": args.batch_index, "rows": len(output_rows), "counts": counts}, indent=2))
 
