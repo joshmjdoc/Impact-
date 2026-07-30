@@ -1,0 +1,51 @@
+name: Domain Availability Research
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - candidate_pool.csv
+      - check_domains.py
+      - .github/workflows/domain-check.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check batch ${{ matrix.batch }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [0, 1, 2, 3, 4]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check requests
+
+      - name: Run authoritative availability checks
+        run: >-
+          python check_domains.py
+          --input candidate_pool.csv
+          --output results/batch-${{ matrix.batch }}.csv
+          --batch-index ${{ matrix.batch }}
+          --batch-count 5
+          --workers 8
+
+      - name: Upload batch results
+        uses: actions/upload-artifact@v4
+        with:
+          name: domain-results-${{ matrix.batch }}
+          path: results/batch-${{ matrix.batch }}.csv
+          if-no-files-found: error
+          retention-days: 7
