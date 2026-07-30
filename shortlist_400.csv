@@ -1,0 +1,401 @@
+rank,display,label
+1,My Clinic Home,myclinichome
+2,My Doctor Home,mydoctorhome
+3,One Doctor Hub,onedoctorhub
+4,My Doctor Access,mydoctoraccess
+5,Our Clinic Hub,ourclinichub
+6,Your Clinic Hub,yourclinichub
+7,My Records Hub,myrecordshub
+8,My Care Simple,mycaresimple
+9,Our Doctor Hub,ourdoctorhub
+10,My Clinic Login,mycliniclogin
+11,One Clinic Home,oneclinichome
+12,One Clinic Now,oneclinicnow
+13,My Clinic Simple,myclinicsimple
+14,One Clinic App,oneclinicapp
+15,One Clinic Desk,oneclinicdesk
+16,One Clinic Link,onecliniclink
+17,My Visit Desk,myvisitdesk
+18,Our Care Desk,ourcaredesk
+19,Our Care Now,ourcarenow
+20,My Visit Home,myvisithome
+21,Your Doctor Hub,yourdoctorhub
+22,My Health Ready,myhealthready
+23,My Doctor Login,mydoctorlogin
+24,My Visit App,myvisitapp
+25,One Doctor Home,onedoctorhome
+26,One Doctor Now,onedoctornow
+27,Our Clinic Home,ourclinichome
+28,My Doctor Simple,mydoctorsimple
+29,Our Care Access,ourcareaccess
+30,Our Clinic Now,ourclinicnow
+31,One Doctor App,onedoctorapp
+32,One Doctor Desk,onedoctordesk
+33,One Doctor Link,onedoctorlink
+34,Our Clinic Desk,ourclinicdesk
+35,Our Clinic Link,ourcliniclink
+36,Our Care Portal,ourcareportal
+37,Our Health Home,ourhealthhome
+38,Our Doctor Home,ourdoctorhome
+39,Your Clinic Now,yourclinicnow
+40,Our Doctor Now,ourdoctornow
+41,Your Clinic App,yourclinicapp
+42,My Records App,myrecordsapp
+43,Our Health App,ourhealthapp
+44,Our Health Desk,ourhealthdesk
+45,Our Doctor App,ourdoctorapp
+46,Our Doctor Desk,ourdoctordesk
+47,Our Doctor Link,ourdoctorlink
+48,Clinic In One,clinicinone
+49,Clinic Made Simple,clinicmadesimple
+50,Care Front Door,carefrontdoor
+51,Clinic Front Door,clinicfrontdoor
+52,Clinics Together,clinicstogether
+53,See Provider,seeprovider
+54,My Care Hub,mycarehub
+55,My Clinic Hub,myclinichub
+56,My Health Hub,myhealthhub
+57,My Doctor Hub,mydoctorhub
+58,My Care Home,mycarehome
+59,My Care Desk,mycaredesk
+60,My Care Link,mycarelink
+61,My Care Now,mycarenow
+62,My Care App,mycareapp
+63,My Clinic Desk,myclinicdesk
+64,My Clinic Link,mycliniclink
+65,One Care Hub,onecarehub
+66,My Care Access,mycareaccess
+67,My Clinic Now,myclinicnow
+68,My Health Home,myhealthhome
+69,My Clinic App,myclinicapp
+70,My Care Portal,mycareportal
+71,One Clinic Hub,oneclinichub
+72,My Clinic Access,myclinicaccess
+73,My Health Desk,myhealthdesk
+74,My Health Link,myhealthlink
+75,My Doctor Desk,mydoctordesk
+76,My Doctor Link,mydoctorlink
+77,My Care Team,mycareteam
+78,My Health Now,myhealthnow
+79,My Doctor Now,mydoctornow
+80,My Visit Hub,myvisithub
+81,Our Care Hub,ourcarehub
+82,My Clinic Portal,myclinicportal
+83,My Health App,myhealthapp
+84,My Doctor App,mydoctorapp
+85,One Health Hub,onehealthhub
+86,My Clinic Team,myclinicteam
+87,My Health Access,myhealthaccess
+88,My Office Hub,myofficehub
+89,One Care Home,onecarehome
+90,Your Care Hub,yourcarehub
+91,My Care Office,mycareoffice
+92,My Care Online,mycareonline
+93,My Health Portal,myhealthportal
+94,My Clinic Connect,myclinicconnect
+95,My Doctor Portal,mydoctorportal
+96,My Care Login,mycarelogin
+97,One Care Desk,onecaredesk
+98,One Care Link,onecarelink
+99,One Care Now,onecarenow
+100,My Health Team,myhealthteam
+101,My Doctor Team,mydoctorteam
+102,One Care App,onecareapp
+103,Our Health Hub,ourhealthhub
+104,My Clinic Office,myclinicoffice
+105,My Clinic Online,mycliniconline
+106,My Medical Hub,mymedicalhub
+107,Our Care Home,ourcarehome
+108,My Health Connect,myhealthconnect
+109,One Care Access,onecareaccess
+110,My Doctor Connect,mydoctorconnect
+111,My Care Cloud,mycarecloud
+112,My Visit Link,myvisitlink
+113,Our Care Link,ourcarelink
+114,One Care Portal,onecareportal
+115,My Practice Hub,mypracticehub
+116,My Visit Now,myvisitnow
+117,Your Health Hub,yourhealthhub
+118,My Health Office,myhealthoffice
+119,My Health Online,myhealthonline
+120,One Care Team,onecareteam
+121,My Doctor Online,mydoctoronline
+122,My Health Login,myhealthlogin
+123,One Health Home,onehealthhome
+124,Your Care Home,yourcarehome
+125,Our Care App,ourcareapp
+126,My Health Simple,myhealthsimple
+127,My Clinic Cloud,mycliniccloud
+128,My Office Desk,myofficedesk
+129,My Office Link,myofficelink
+130,One Health Now,onehealthnow
+131,My Office Now,myofficenow
+132,One Health App,onehealthapp
+133,One Health Desk,onehealthdesk
+134,One Health Link,onehealthlink
+135,Your Care Desk,yourcaredesk
+136,Your Care Link,yourcarelink
+137,My Office App,myofficeapp
+138,Your Care Now,yourcarenow
+139,Our Clinic App,ourclinicapp
+140,My Medical Home,mymedicalhome
+141,One Care Connect,onecareconnect
+142,Your Care App,yourcareapp
+143,Care Home,carehome
+144,My Health Cloud,myhealthcloud
+145,Our Care Team,ourcareteam
+146,Your Care Access,yourcareaccess
+147,My Medical Desk,mymedicaldesk
+148,My Medical Link,mymedicallink
+149,My Records Now,myrecordsnow
+150,Our Health Now,ourhealthnow
+151,Care Desk,caredesk
+152,Care Link,carelink
+153,My Medical Now,mymedicalnow
+154,Our Health Link,ourhealthlink
+155,Clinic Home,clinichome
+156,Your Care Portal,yourcareportal
+157,My Medical App,mymedicalapp
+158,Our Care Connect,ourcareconnect
+159,Clinic Desk,clinicdesk
+160,Clinic Link,cliniclink
+161,My Medical Access,mymedicalaccess
+162,My Practice Now,mypracticenow
+163,Your Health Now,yourhealthnow
+164,Easy Clinic,easyclinic
+165,Good Clinic,goodclinic
+166,Open Clinic,openclinic
+167,Real Clinic,realclinic
+168,True Clinic,trueclinic
+169,My Practice Desk,mypracticedesk
+170,My Practice Link,mypracticelink
+171,Your Doctor Now,yourdoctornow
+172,Care Access,careaccess
+173,Clinic Now,clinicnow
+174,My Practice App,mypracticeapp
+175,Your Health App,yourhealthapp
+176,Next Care,nextcare
+177,Ready Clinic,readyclinic
+178,Your Doctor App,yourdoctorapp
+179,Smart Clinic,smartclinic
+180,Health Home,healthhome
+181,Doctor Home,doctorhome
+182,My Medical Portal,mymedicalportal
+183,Ready Health,readyhealth
+184,Go Care,gocare
+185,Whole Care,wholecare
+186,Simple Clinic,simpleclinic
+187,Home Clinic,homeclinic
+188,My Tele Care,mytelecare
+189,Your Care Connect,yourcareconnect
+190,Pure Care,purecare
+191,Clinic Access,clinicaccess
+192,Health Desk,healthdesk
+193,Health Link,healthlink
+194,Doctor Desk,doctordesk
+195,Doctor Link,doctorlink
+196,Get Care,getcare
+197,My Tele Clinic,myteleclinic
+198,New Care,newcare
+199,See Care,seecare
+200,Modern Care,moderncare
+201,Next Clinic,nextclinic
+202,Ready Doctor,readydoctor
+203,Care Ready,careready
+204,Clear Clinic,clearclinic
+205,Hello Clinic,helloclinic
+206,Care In One,careinone
+207,Fresh Care,freshcare
+208,Local Care,localcare
+209,Care Map,caremap
+210,Care Way,careway
+211,Easy Doctor,easydoctor
+212,Open Doctor,opendoctor
+213,Real Doctor,realdoctor
+214,True Doctor,truedoctor
+215,Clear Health,clearhealth
+216,Hello Health,hellohealth
+217,Book Care,bookcare
+218,Whole Clinic,wholeclinic
+219,Simple Doctor,simpledoctor
+220,Happy Care,happycare
+221,Ask Care,askcare
+222,My Online Care,myonlinecare
+223,Care Office,careoffice
+224,Honest Care,honestcare
+225,Life Clinic,lifeclinic
+226,Pure Clinic,pureclinic
+227,Strong Care,strongcare
+228,Care Base,carebase
+229,Care Book,carebook
+230,Care Door,caredoor
+231,Care Room,careroom
+232,Clinic Ready,clinicready
+233,Tele Care,telecare
+234,Clinic Way,clinicway
+235,Care Guide,careguide
+236,Care House,carehouse
+237,Care Place,careplace
+238,Care Start,carestart
+239,Clinic Door,clinicdoor
+240,Clinic Path,clinicpath
+241,Clinic Room,clinicroom
+242,All In Care,allincare
+243,Care First,carefirst
+244,Clinic Guide,clinicguide
+245,Clinic House,clinichouse
+246,Clinic Place,clinicplace
+247,Clinic Start,clinicstart
+248,My Care Key,mycarekey
+249,Health Ready,healthready
+250,Doctor Ready,doctorready
+251,Health Way,healthway
+252,Clinic First,clinicfirst
+253,My Clinic Key,myclinickey
+254,Doctor Way,doctorway
+255,Care Corner,carecorner
+256,Health In One,healthinone
+257,My Care Door,mycaredoor
+258,My Care Path,mycarepath
+259,My Care Room,mycareroom
+260,All In Clinic,allinclinic
+261,Health Door,healthdoor
+262,Health Room,healthroom
+263,My Clinic Door,myclinicdoor
+264,My Clinic Path,myclinicpath
+265,My Clinic Room,myclinicroom
+266,Doctor Door,doctordoor
+267,Doctor Path,doctorpath
+268,Doctor Room,doctorroom
+269,My Care Guide,mycareguide
+270,My Care House,mycarehouse
+271,My Care Place,mycareplace
+272,Care Made Simple,caremadesimple
+273,Care Circle,carecircle
+274,Care Direct,caredirect
+275,Health Guide,healthguide
+276,Health House,healthhouse
+277,Health Place,healthplace
+278,Health Start,healthstart
+279,My Clinic Guide,myclinicguide
+280,My Clinic House,myclinichouse
+281,My Clinic Place,myclinicplace
+282,Easy Clinic Care,easycliniccare
+283,Doctor Guide,doctorguide
+284,Doctor House,doctorhouse
+285,Doctor Place,doctorplace
+286,Doctor Start,doctorstart
+287,Clinic Corner,cliniccorner
+288,My Care Bridge,mycarebridge
+289,My Care Center,mycarecenter
+290,Health First,healthfirst
+291,Doctor First,doctorfirst
+292,My Health Key,myhealthkey
+293,My Clinic Bridge,myclinicbridge
+294,My Clinic Center,mycliniccenter
+295,Clinic Bridge,clinicbridge
+296,Clinic Circle,cliniccircle
+297,Clinic Direct,clinicdirect
+298,Simple Clinic Care,simplecliniccare
+299,All In Health,allinhealth
+300,Care Key,carekey
+301,Care Made Easy,caremadeeasy
+302,My Health Door,myhealthdoor
+303,My Health Path,myhealthpath
+304,My Health Room,myhealthroom
+305,Clinic Key,clinickey
+306,Care Crew,carecrew
+307,My Health Guide,myhealthguide
+308,My Health House,myhealthhouse
+309,My Health Place,myhealthplace
+310,Easy Health Care,easyhealthcare
+311,Health Corner,healthcorner
+312,Clinic Crew,cliniccrew
+313,Care Pilot,carepilot
+314,Health Circle,healthcircle
+315,Health Direct,healthdirect
+316,My Doctor Key,mydoctorkey
+317,Clinic Made Easy,clinicmadeeasy
+318,My Health Bridge,myhealthbridge
+319,My Health Center,myhealthcenter
+320,Doctor Bridge,doctorbridge
+321,Doctor Direct,doctordirect
+322,Simple Health Care,simplehealthcare
+323,Clinic Pilot,clinicpilot
+324,Your Clinic Home,yourclinichome
+325,Care Simple,caresimple
+326,My Doctor Door,mydoctordoor
+327,My Doctor Path,mydoctorpath
+328,One Care Key,onecarekey
+329,Care Made Clear,caremadeclear
+330,Health Key,healthkey
+331,Clinic Simple,clinicsimple
+332,One Clinic Key,oneclinickey
+333,Clinic Made Clear,clinicmadeclear
+334,Everything Clinic,everythingclinic
+335,Care Central,carecentral
+336,My Doctor Guide,mydoctorguide
+337,My Doctor Place,mydoctorplace
+338,One Care Door,onecaredoor
+339,One Care Path,onecarepath
+340,One Care Room,onecareroom
+341,Everything Care,everythingcare
+342,Health Crew,healthcrew
+343,Clinic Central,cliniccentral
+344,One Clinic Door,oneclinicdoor
+345,One Clinic Path,oneclinicpath
+346,One Clinic Room,oneclinicroom
+347,One Clinic Team,oneclinicteam
+348,My Doctor Bridge,mydoctorbridge
+349,One Care Guide,onecareguide
+350,One Care House,onecarehouse
+351,One Care Place,onecareplace
+352,Health Pilot,healthpilot
+353,Health Made Easy,healthmadeeasy
+354,One Clinic Guide,oneclinicguide
+355,One Clinic House,oneclinichouse
+356,One Clinic Place,oneclinicplace
+357,Your Health Home,yourhealthhome
+358,One Care Bridge,onecarebridge
+359,One Care Center,onecarecenter
+360,Doctor Key,doctorkey
+361,Health Simple,healthsimple
+362,One Health Key,onehealthkey
+363,Everything Health,everythinghealth
+364,Health Front Door,healthfrontdoor
+365,Health Made Clear,healthmadeclear
+366,Health Made Simple,healthmadesimple
+367,One Clinic Bridge,oneclinicbridge
+368,One Clinic Center,onecliniccenter
+369,Care Core,carecore
+370,Care Nest,carenest
+371,Care Team,careteam
+372,Care Tree,caretree
+373,Clinic Core,cliniccore
+374,Clinic Nest,clinicnest
+375,Clinic Team,clinicteam
+376,Clinic Tree,clinictree
+377,Doctor Crew,doctorcrew
+378,Health Central,healthcentral
+379,One Health Door,onehealthdoor
+380,One Health Path,onehealthpath
+381,One Health Room,onehealthroom
+382,One Health Team,onehealthteam
+383,Care Board,careboard
+384,Care Front,carefront
+385,Care Spark,carespark
+386,Clinic Board,clinicboard
+387,Clinic Front,clinicfront
+388,Clinic Spark,clinicspark
+389,Doctor Pilot,doctorpilot
+390,One Health Guide,onehealthguide
+391,One Health House,onehealthhouse
+392,One Health Place,onehealthplace
+393,Your Doctor Home,yourdoctorhome
+394,Doctor Simple,doctorsimple
+395,One Doctor Key,onedoctorkey
+396,One Health Bridge,onehealthbridge
+397,One Health Center,onehealthcenter
+398,Care Compass,carecompass
+399,Care Gateway,caregateway
+400,Health Core,healthcore
