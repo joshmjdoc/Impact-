@@ -1,0 +1,27 @@
+name: Probe IO RDAP
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/probe-io.yml
+      - probe-io-trigger.txt
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe known and invented IO domains
+        shell: bash
+        run: |
+          set -u
+          for domain in mytelehealth.io teledoctors.io google.io example.io zzqxyjtelehealthportal.io mycarehub.io; do
+            code=$(curl --max-time 25 --retry 1 --retry-delay 1 -sS -o /tmp/rdap.json -w '%{http_code}' "https://rdap.identitydigital.services/rdap/domain/${domain}" || true)
+            echo "${domain} HTTP ${code} bytes $(wc -c </tmp/rdap.json 2>/dev/null || echo 0)"
+            head -c 180 /tmp/rdap.json 2>/dev/null || true
+            echo
+          done
