@@ -1,0 +1,41 @@
+name: Verify IO Shortlist
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - shortlist_400.csv
+      - verify_io_only.py
+      - .github/workflows/verify-io.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify IO batch ${{ matrix.batch }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check requests
+      - run: >-
+          python verify_io_only.py
+          --input shortlist_400.csv
+          --output io-verified/batch-${{ matrix.batch }}.csv
+          --batch-index ${{ matrix.batch }}
+          --batch-count 8
+      - uses: actions/upload-artifact@v4
+        with:
+          name: io-verified-${{ matrix.batch }}
+          path: io-verified/batch-${{ matrix.batch }}.csv
+          if-no-files-found: error
+          retention-days: 7
