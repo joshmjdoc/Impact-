@@ -7,6 +7,13 @@ on:
       - candidate_pool.csv
       - check_domains.py
       - .github/workflows/domain-check.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - candidate_pool.csv
+      - check_domains.py
+      - .github/workflows/domain-check.yml
+      - run-domain-check.txt
   workflow_dispatch:
 
 permissions:
