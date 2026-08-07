@@ -1,0 +1,4 @@
+# Security and data boundary
+TurnWidget stores and publishes presentation plus opaque verified action identities. The clinical interaction stays directly between the browser and TelehealthUS. Pasted HTML is parsed, never rendered or executed. URLs are exact-host allowlisted and canonicalized to HTTPS. Analytics accepts only enumerated operational fields and rejects unknown fields; it must never accept patient identity, clinical content, intake answers, insurance data, or free text.
+
+This architecture reduces PHI exposure but is not, by itself, a claim of HIPAA compliance. Production requires durable tenant-scoped repositories, real authentication/authorization, encryption and key rotation, rate limiting, CSRF review, audit retention, dependency review, backups, and an organizational compliance assessment.
