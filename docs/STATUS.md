@@ -3,6 +3,8 @@
 - Responsive clinic dashboard and guided snippet builder.
 - Deterministic parse5-based parsing for all confirmed routes, HTTPS canonicalization, source hashing, and hostile-input rejection.
 - In-memory immutable publish lifecycle, safe public payload endpoint, strict analytics schema, Shadow DOM runtime, mock EHR catalog, health endpoint.
+- Working desktop, tablet, and mobile builder previews with an interactive safe launch confirmation.
+- Cross-origin-capable universal loader with safe DOM construction, modal launch, Escape/close behavior, and focus return.
 - Unit tests and production build configuration are included but could not be executed because this environment returned HTTP 403 for npm registry dependency downloads.
 
 ## Remaining / blockers

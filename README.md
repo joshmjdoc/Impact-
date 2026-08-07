@@ -11,7 +11,9 @@ pnpm dev
 Open <http://localhost:5173>. API health is <http://localhost:4100/api/health>. The demo persona is `clinicadmin-a@example.test` / `TurnWidget-Demo-Only!`; identity is illustrative and the current slice does not implement a login boundary.
 
 ## Demo
-For V1 choose **Create**, paste any supplied route format, Analyze, confirm the locked IDs, edit copy/color, and Publish. Copy the generated embed. For the V2 boundary call `/api/ehr/clinics`; it returns distinct Desert Wellness and Modern Men's Health mock catalogs, while `/api/ehr/status` clearly reports `Mock`.
+For V1 choose **Create**, paste any supplied route format, Analyze, confirm the locked IDs, edit copy/color, and use the Desktop/Tablet/Mobile controls. Click the preview CTA to inspect the locked launch action, then Publish and copy the generated embed. For the V2 boundary call `/api/ehr/clinics`; it returns distinct Desert Wellness and Modern Men's Health mock catalogs, while `/api/ehr/status` clearly reports `Mock`.
+
+The copied loader is cross-origin capable: it resolves public API requests against the loader script's own origin rather than the website embedding it. Modal launch requires TelehealthUS to permit framing as described in `docs/EMBEDDING_AND_CSP.md`.
 
 ## Quality
 ```bash
